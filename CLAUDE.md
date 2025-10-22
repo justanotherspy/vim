@@ -24,6 +24,19 @@ make check
 - `make minimal` - Install a minimal vim configuration
 - `make sync` - Sync your .vimrc with the template (removes drift)
 
+### Theme Commands
+
+- `make theme` - Interactive theme selector with previews
+- `make theme-list` - List all available themes
+- `make theme-preview` - Preview all themes
+- `make theme-claude` - Set Claude theme (Anthropic brand colors)
+- `make theme-oceanic` - Set Oceanic theme (deep blue ocean)
+- `make theme-forest` - Set Forest theme (nature-inspired greens)
+- `make theme-sunset` - Set Sunset theme (warm oranges and reds)
+- `make theme-monochrome` - Set Monochrome theme (clean black and white)
+- `make theme-nord` - Set Nord theme (arctic-inspired blues)
+- `make theme-synthwave` - Set Synthwave theme (retro 80s neon)
+
 ### Testing & Verification
 
 - `make check` - Check if current .vimrc has drifted from template
@@ -53,6 +66,8 @@ make check
 
 - `vimrc.template` - The master vim configuration template
 - `setup_vim.py` - Python script for managing vim configuration
+- `select_theme.py` - Interactive theme selector script
+- `colors/` - Directory containing custom vim color schemes
 - `Makefile` - Convenient make commands for common tasks
 
 ## Features
@@ -61,12 +76,40 @@ The vim configuration includes:
 - Line numbers (absolute and relative)
 - Mouse support in all modes
 - Smart indentation (4 spaces by default)
-- Syntax highlighting
+- Syntax highlighting with multiple color themes
 - Persistent undo history
 - Organized backup/swap/undo files
 - Useful key mappings (Space as leader)
 - Platform-specific clipboard support
 - Support for local overrides via `~/.vimrc.local`
+
+## Themes
+
+The repository includes 7 carefully crafted color themes:
+
+1. **Claude** - Anthropic brand colors (professional and refined)
+   - Dark: #141413, Light: #faf9f5
+   - Accents: Orange (#d97757), Blue (#6a9bcc), Green (#788c5d)
+
+2. **Oceanic** - Deep blue ocean theme (calming and focused)
+   - Inspired by the depths of the ocean
+
+3. **Forest** - Nature-inspired greens (peaceful and natural)
+   - Calming earth tones and forest colors
+
+4. **Sunset** - Warm oranges and reds (energetic and vibrant)
+   - Perfect for those who prefer warm color palettes
+
+5. **Monochrome** - Clean black and white (minimalist and focused)
+   - For maximum clarity and minimal distraction
+
+6. **Nord** - Arctic-inspired cool blues (elegant and modern)
+   - Based on the popular Nord color palette
+
+7. **Synthwave** - Retro 80s neon (bold and nostalgic)
+   - Vibrant purples, pinks, and cyans
+
+To change themes, run `make theme` for an interactive selector or `make theme-<name>` to set directly.
 
 ## Customization
 
