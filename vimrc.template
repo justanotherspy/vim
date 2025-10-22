@@ -75,11 +75,19 @@ syntax enable                 " Enable syntax highlighting
 set background=dark           " Dark background
 filetype plugin indent on     " Enable filetype detection, plugins, and indent
 
-" Try to use a nice colorscheme if available
+" Theme Configuration
+" Available themes: claude, oceanic, forest, sunset, monochrome, nord, synthwave
+" To change themes: run 'make theme' for interactive selection
+" or 'make theme-<name>' (e.g., 'make theme-claude')
 try
-    colorscheme desert
+    colorscheme claude
 catch
-    " Fall back to default if colorscheme not found
+    " Fall back to desert if colorscheme not found
+    try
+        colorscheme desert
+    catch
+        " Use default if nothing else works
+    endtry
 endtry
 
 " --- Splits ---
